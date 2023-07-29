@@ -1,0 +1,47 @@
+.theme-gallery {
+    &-item {
+        overflow: hidden;
+        border-radius: var(--gallery-radius);
+        display: block;
+        img {
+            border-radius: var(--gallery-radius);
+            transition: 0.15s all;
+            height: 270px;
+            object-fit: cover;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &-owl {
+        .owl-stage {
+            left: -30px;
+            @include media("md") {
+                left: -60px;
+            }
+        }
+        .owl-nav {
+            margin-top: 0;
+            .owl-prev {
+                display: none;
+            }
+            .owl-next {
+                position: absolute;
+                right: 2.1rem;
+                top: 50%;
+                transform: translate(0,-50%);
+                background-color: var(--button-color) !important;
+                border-radius: 50%;
+                width: 60px;
+                aspect-ratio: 1/1;
+                margin: 0 !important;
+                @include flexCenter();
+                @include media("sm") {
+                    right: 1.5rem;
+                }
+            }
+        }
+    }
+}

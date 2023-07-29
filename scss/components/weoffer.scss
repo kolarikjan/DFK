@@ -1,0 +1,136 @@
+.theme-weoffer {
+    &-list {
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                list-style: none;
+                background-image: url("../img/icon-tick-blue.png");
+                background-position: top 5px left;
+                background-repeat: no-repeat;
+                padding-left: 3.75rem;
+                margin-bottom: .75rem;
+                font-weight: 500;
+            }
+        }
+    }
+    &-button {
+        margin: 2.5rem 0 0 3.75rem;
+        @include media("md") {
+            margin: 2.5rem 0 0;
+            .button-custom {
+                margin: 0 auto;
+            }
+        }
+    }
+    &-images {
+        position: relative;
+        height: 100%;
+        max-height: 680px;
+        margin-right: 5rem;
+        margin-top: 2.3rem;
+        @include media("xl") {
+            max-height: 520px;
+        }
+        @media (max-width: 1400px) {
+            margin-right: 2rem;
+        }
+        @include media("lg") {
+            height: 495px;
+            margin-right: 5rem;
+            margin-left: 5rem;
+            margin-top: 3.5rem;
+        }
+        @include media("md") {
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+        @include media("sm") {
+            margin-right: 0rem;
+            margin-left: 0rem;
+        }
+        & > img {
+            z-index: 2;
+            position: absolute;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+                width: 430px;
+                height: 555px;
+                @include media("xl") {
+                    width: 305px;
+                    height: 365px;
+                }
+                @include media("md") {
+                    width: 80%;
+                }
+                @include media("sm") {
+                    width: 90%;
+                }
+            }
+            &:nth-child(2) {
+                bottom: 0;
+                right: 0;
+                width: 400px;
+                height: 385px;
+                @include media("xl") {
+                    width: 290px;
+                    height: 260px;
+                }
+                @include media("md") {
+                    width: 80%;
+                }
+                @include media("sm") {
+                    width: 90%;
+                }
+            }
+        }
+        &::after, &::before {
+            background-color: var(--background-secondary-color);
+            content: "";
+            z-index: 1;
+            position: absolute;
+            display: block;
+            border-radius: var(--border-radius);
+            opacity: 0.5;
+            @include media("sm") {
+                content: none;
+            }
+        }
+        &::before {
+            left: 6rem;
+            width: calc(100% - 6rem);
+            height: 300px;
+            bottom: 2.25rem;
+            @include media("xxxl") {
+                left: 4rem;
+                width: calc(100% - 4rem);
+            }
+            @media (max-width: 1400px) {
+                left: 2rem;
+                width: calc(100% - 2rem);
+            }
+            @include media("xl") {
+                left: 3rem;
+                width: calc(100% - 3rem);
+                height: 200px;
+            }
+        }
+        &::after {
+            left: -2rem;
+            top: 9.75rem;
+            height: 430px;
+            width: 100%;
+            @include media("xl") {
+                top: 3rem;
+                height: 350px;
+            }
+            @include media("sm") {
+                left: 0;
+                width: 90%;
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.theme-equipment {
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+    @include media("lg") {
+        padding-top: 0rem;
+    }
+    @media (max-width: 1400px) {
+        margin-bottom: 0;
+    }
+    &-list {
+        @include media("lg") {
+            margin-bottom: 5rem;
+        }
+        @include media("sm") {
+            margin-bottom: 3rem;
+        }
+        ul {
+            margin: 2.5rem 0 0 0;
+            padding: 0;
+            list-style: none;
+            li {
+                display: flex;
+                align-items: flex-start;
+                font-family: var(--font2);
+                font-size: 28px;
+                line-height: 32px;
+                font-weight: 600;
+                margin-bottom: 2rem;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 25px;
+                    height: 2px;
+                    background-color: var(--highlight-color);
+                    margin-top: 17px;
+                    margin-right: 1rem;
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+    &-images {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        @media (max-width: 1400px) {
+            align-items: center;
+        }
+        &-inner {
+            position: relative;
+            @include media("xxl") {
+                margin-left: 3rem;
+            }
+            @include media("lg") {
+                margin-left: 0;
+            }
+            img {
+                z-index: 2;
+                position: relative;
+                object-fit: cover;
+                border-radius: var(--border-radius);
+                max-height: 390px;
+                max-width: 470px;
+                @media (max-width: 1400px) {
+                    max-height: 335px;
+                    max-width: 400px;
+                }
+                @include media("sm") {
+                    max-width: 100%;
+                    height: auto;
+                    max-height: 300px;
+                }
+            }
+            &::after, &::before {
+                background-color: var(--background-secondary-color);
+                content: "";
+                z-index: 1;
+                position: absolute;
+                display: block;
+                border-radius: var(--border-radius);
+                opacity: 0.5;
+                @include media("sm") {
+                    content: none;
+                }
+            }
+            &::before {
+                left: -2rem;
+                top: -2rem;
+                height: 290px;
+                width: 260px;
+            }
+            &::after {
+                right: -2rem;
+                bottom: -2rem;
+                height: 350px;
+                width: 300px;
+            }    
+        }
+    }
+}

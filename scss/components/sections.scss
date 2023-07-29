@@ -1,0 +1,156 @@
+.section {
+    padding: 8rem 0;
+    @include media("md") {
+        padding: 4rem 0;
+    }
+    &-background {
+        background-color: var(--section-color);
+    }
+    &-footer {
+        margin-top: 4.5rem;
+        @include flexCenter();
+    }
+    &-header {
+        &-small {
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: .5rem;
+        }
+        h2{
+            font-size: 70px;
+            line-height: 70px;
+            font-weight: 500;
+            margin-bottom: 0;
+            @include media("md") {
+                font-size: 55px;
+                line-height: 55px;
+            }
+            span {
+                font-family: var(--font2);
+                @include min-media("xl") {
+                    display: block;
+                }
+            }
+        }
+        margin-bottom: 3.5rem;
+        @include media("md") {
+            margin-bottom: 2.75rem;
+            text-align: center;
+        }
+    }
+    &-reducedPadding {
+        padding: 1rem 0;
+    }
+    &-output {
+        @include media("md") {
+            *:not(li):not(ul):not(ol) {
+                text-align: center;
+            }
+            ul,ol {
+                margin-left: auto;
+                margin-right: auto;
+                @include widthFit();
+            }
+        }
+        & > *:first-child {
+            margin-top: 0;
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+        p, li, td, th {
+            font-family: var(--font);
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 400;
+            color: var(--primary-color);
+        }
+        table {
+            width: 100%;
+            thead tr {
+                background-color: var(--table-header-color);
+                th {
+                    font-weight: 500;
+                }
+            }
+            tbody tr {
+                &:nth-child(odd) {
+                    background-color: var(--table-color);
+                }
+            }
+            th, td {
+                padding: .75rem 2.5rem;
+            }
+        }
+        ul {
+            padding: 0;
+            li {
+                list-style: none;
+                display: flex;
+                align-items: flex-start;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 15px;
+                    height: 2px;
+                    background-color: var(--highlight-color);
+                    margin-top: 14px;
+                    margin-right: 1rem;
+                    flex-shrink: 0;
+                }
+            }
+        }
+        h1 {
+            font-size: 58px;
+            margin: 4rem 0 3rem;
+            @include media("md") {
+                font-size: 52px;
+                margin: 3.5rem 0 2.5rem;
+            }
+        }
+        h2 {
+            font-size: 52px;
+            margin: 3.5rem 0 2.5rem;
+            @include media("md") {
+                font-size: 42px;
+                margin: 3rem 0 2rem;
+            }
+        }
+        h3 {
+            font-size: 36px;
+            margin: 3rem 0 2rem;
+            @include media("md") {
+                font-size: 30px;
+                margin: 2.5rem 0 1.75rem;
+            }
+        }
+        h4 {
+            font-size: 28px;
+            margin: 3rem 0 2rem;
+            @include media("md") {
+                font-size: 26px;
+                margin: 2.5rem 0 1.75rem;
+            }
+        }
+        a {
+            color: var(--highlight-color);
+        }
+    }
+}
+.innerContainer {
+    padding: 0 8rem;
+    @include media("xxl") {
+        padding: 0 3.5rem;
+    }
+    @include media("lg") {
+        padding: 0 2.5rem;
+    }
+    @include media("md") {
+        padding: 0;
+    }
+}
+.container-no-right {
+    margin-right: 0;
+    padding-right: 0;
+}
