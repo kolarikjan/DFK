@@ -7,7 +7,9 @@
     --dropdown-content-color: #fbfbfb;
     --primary-color: #000;
     --secondary-color: #ffffff;
+    --secondary-color-opacity: #ffffff57;
     --border-color-light: #ffffff14;
+    --border-color: #e1e4eb;
     --paragraph-color: #616161;
 
     --table-color: #f6f9fc;
@@ -19,7 +21,6 @@
     --section-preTitle-color: #575656;
     --services-boxes-color: #f1f8fd;
     --news-date-color: #ababab;
-    --border-color: #e8f2fc;
     --news-border-color: #eaecf0;
     --highlight-light-color: #e1f3ff;
     --socials-icon-color: #343434;

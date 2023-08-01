@@ -3,7 +3,7 @@
     background-image: var(--banner-homepage-background);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 2.5rem;
+    padding-bottom: 3.5rem;
     &-menu {
         border-bottom: 1px solid var(--border-color-light);
         padding: 1.5rem 0;
@@ -89,7 +89,8 @@
                     font-size: 15px;
                     font-weight: 500;
                     text-transform: uppercase;
-                    padding: 0.75rem 1rem;
+                    padding: 0 1rem;
+                    display: block;
                     text-decoration: none;
                     position: relative;
                     &:hover {
@@ -103,13 +104,34 @@
         }
     }
     &-main {
-        margin: 3rem 0;
+        padding: 3rem 0 2rem;
         &-item {
+            &-image {
+                img {
+                    max-height: 540px;
+                    object-fit: scale-down;
+                    margin: 0 auto;
+                    display: block;
+                    @include media("xl") {
+                        margin: 0;
+                    }
+                    @include media("lg") {
+                        height: 400px;
+                    }
+                    @include media("sm") {
+                        height: 300px;
+                    }
+                }
+            }
             &-content {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                @include media("xl") {
+                    height: auto;
+                    margin-bottom: 2.5rem;
+                }
                 h2 {
                     font-size: 42px;
                     line-height: 50px;
@@ -121,18 +143,74 @@
                     span {
                         color: var(--highlight-color2);
                     }
+                    @include media("xl") {
+                        margin-top: 0;
+                        margin-bottom: 1.5rem;
+                    }
+                    @include media("md") {
+                        font-size: 38px;
+                        line-height: 46px;
+                    }
                 }
                 p {
                     color: var(--secondary-color);
                     margin-bottom: 3.5rem;
+                    @include media("xl") {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            position: absolute;
+            top: calc(50% - 12px);
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% + 10rem);
+            left: -5rem;
+            right: -5rem;
+            @include media("xl") {
+                width: calc(100% + 8rem);
+                left: -4rem;
+                right: -4rem;
+            }
+            @include media("md") {
+                display: none;
+            }
+            .owl-prev, .owl-next {
+                border: 2px solid var(--border-color-light) !important;
+                width: 47px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                transition-duration: 0.1s;
+                @include flexCenter();
+                &:hover {
+                    background-color: var(--border-color-light) !important;
+                }
+            }
+        }
+        .owl-dots {
+            margin-top: 1rem;
+            button {
+                width: 60px;
+                height: 5px;
+                background-color: var(--border-color-light);
+                margin: 0 .25rem;
+                &.active {
+                    background-color: var(--highlight-color2);
+                }
+                span {
+                    display: none !important;
                 }
             }
         }
     }
     &-categories {
+        margin-bottom: -1.75rem;
         &-item {
             display: block;
-            margin-bottom: 1rem;
+            margin-bottom: 1.75rem;
             &-image {
                 position: relative;
                 overflow: hidden;
@@ -174,9 +252,12 @@
                 animation: shine .75s;
             }
             &-title {
-                @include flexCenter();
+                display: flex;
+                justify-content: center;
                 svg {
                     margin-right: 1rem;
+                    padding: 0.1rem 0;
+                    flex-shrink: 0;
                 }
                 h3 {
                     color: var(--secondary-color);

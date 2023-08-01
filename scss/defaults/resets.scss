@@ -31,13 +31,18 @@ h1,h2,h3,h4,h5,h6 {
   font-family: var(--font2);
 }
 p,li {
-  color: var(--primary-color);
+  color: var(--paragraph-color);
   font-size: 16px;
   line-height: 30px;
 }
-input, textarea {
+input, textarea, button {
   outline: none;
   box-shadow: none;
+  border: none;
+}
+.w-fit {
+  width: fit-content;
+  width: -moz-fit-content;
 }
 .navbar-toggler {
   border: none !important;
@@ -48,4 +53,7 @@ input, textarea {
   background: none !important;
   box-shadow: none !important;
   outline: none !important;
+}
+.fw-bold {
+  font-weight: 600 !important;
 }

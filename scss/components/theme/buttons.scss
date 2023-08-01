@@ -4,12 +4,13 @@
     font-size: 15px;
     font-weight: 600;
     padding: 1rem 2rem;
-    transition: 0.25s;
+    transition-duration: 0.1s;
     border-radius: var(--button-radius);
+    position: relative;
     &:hover {
         text-decoration: none;
     }
-    span {
+    /*span {
         position: relative;
         &::after {
             content: "";
@@ -22,7 +23,7 @@
             bottom: -2px;
             transition-duration: 0.1s;
         }
-    }
+    }*/
     &-arrow {
         svg {
             margin-left: 1rem;
@@ -75,13 +76,13 @@
         display: flex;
         &:hover {
             text-decoration: none;
-            .theme-button {
+            /*.theme-button {
                 span {
                     &::after {
                         background-color: var(--secondary-color);
                     }   
                 }
-            }
+            }*/            
         }
         .theme-icon {
             border-top-right-radius: 0;

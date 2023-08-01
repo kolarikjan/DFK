@@ -1,0 +1,17 @@
+.theme-form {
+    input:not([type="submit"]) {
+        border: 1px solid var(--border-color);
+        font-size: 15px;
+        color: var(--primary-color);
+        border-radius: var(--button-radius);
+        padding: .9rem 1.25rem;
+        transition-duration: 0.1s;
+        width: 100%;
+        &:focus, &:active {
+            border-color: var(--highlight-color);
+        }
+        &::placeholder {
+            color: var(--primary-color);
+        }
+    }
+}

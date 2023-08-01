@@ -1,7 +1,11 @@
 .section-news {
+    &-row {
+        margin-bottom: -1.5rem;
+    }
     &-item {
         background-color: var(--secondary-color);
-        height: 100%;
+        height: calc(100% - 1.5rem);
+        margin-bottom: 1.5rem;
         box-shadow: -0.776px -2.898px 61.32px 11.68px rgba(0, 0, 0, 0.05);
         &-date {
             position: absolute;
@@ -13,13 +17,15 @@
             font-size: 13px;
             font-weight: 600;
             border-radius: 3px;
-            @include media("md") {
-                left: 50%;
-                transform: translateX(-50%);
+            @include media("sm") {
+                left: 1.75rem;
             }
         }
         &-body {
             padding: 3rem 2.5rem 2.75rem;
+            @include media("sm") {
+                padding: 2.5rem 1.75rem 2.5rem;
+            }
         }
         &-image {
             border-top-left-radius: var(--border-radius);

@@ -15,11 +15,6 @@
                 fill: var(--dropdown-icon-color);
             }
         }
-        &:hover &-icon {
-            path {
-                fill: var(--highlight-color);
-            }
-        }
         &-title {
             &, span {
                 color: var(--primary-color);
@@ -29,9 +24,17 @@
         }
         &-arrow {
             margin-left: .65rem;
-            path {
-                fill: var(--highlight-color);
+            svg {
+                transition-duration: 0.1s;
+                path {
+                    fill: var(--highlight-color);
+                }
             }
+        }
+    }
+    &:hover &-header-icon {
+        path {
+            fill: var(--highlight-color);
         }
     }
     &-content {
@@ -44,7 +47,7 @@
         right: 0;
         min-width: 100%;
         width: max-content;
-        padding: 1rem;
+        padding: 1rem .5rem;
         margin-top: .25rem;
         ul {
             list-style: none;
@@ -54,10 +57,24 @@
                 color: var(--primary-color);
                 font-size: 15px;
                 font-weight: 500;
+                padding: 0 .5rem;
+                border-radius: 5px;
+                transition-duration: 0.1s;
+                &:hover {
+                    text-decoration: none;
+                    background-color: var(--highlight-color);
+                    color: var(--secondary-color);
+                }
             }
         }
     }
+    &.active &-header-icon path {
+        fill: var(--highlight-color);
+    }
     &.active > &-content {
         display: block;
+    }
+    &.active &-header-arrow svg {
+        transform: rotate(180deg);
     }
 }

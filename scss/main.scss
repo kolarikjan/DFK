@@ -1,10 +1,15 @@
+/* 
+Theme name: DFK
+Author: Jan Kolařík
+Author url: www.jan-kolarik.cz
+*/
+
 // Defaults
 @import "defaults/variables.scss";
 @import "defaults/resets.scss";
 @import "defaults/functions.scss";
 
 // Components
-@import "components/header.scss";
 @import "components/header.scss";
 @import "components/theme/buttons.scss";
 @import "components/theme/icons.scss";
@@ -13,13 +18,14 @@
 @import "components/sections.scss";
 @import "components/aboutus.scss";
 @import "components/news.scss";
-//@import "components/weoffer.scss";
-//@import "components/equipment.scss";
-//@import "components/services.scss";
-//@import "components/gallery.scss";
+@import "components/copyright.scss";
+@import "components/newsletter.scss";
+@import "components/forms.scss";
+@import "components/map.scss";
+
+// Layout
+@import "components/header.scss";
 @import "components/footer.scss";
-//@import "components/contactform.scss";
-//@import "components/contact.scss";
 
 // Style 
 @media (min-width: map-get($breaks, "xxl")) {
@@ -28,11 +34,14 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+    .container-extended {
+        max-width: 1540px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 @media (min-width: map-get($breaks, "xxxl")) {
     .container-extended {
         max-width: 1680px;
-        padding-left: 15px;
-        padding-right: 15px;
     }
 }
