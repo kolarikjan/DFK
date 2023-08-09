@@ -1,8 +1,8 @@
 
 const checkVisible = (elm) => {
 
-    var rect = elm.getBoundingClientRect();
-    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    let rect = elm.getBoundingClientRect();
+    let viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
     return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 
 }
@@ -128,11 +128,37 @@ const companySliderChanger = (dir) => {
     }
 }
 
+const catalogImages = () => {
+    $(".products-catalog-item-imagebox").each(function(index){
+        const img = new Image();
+        const el = $(this);
+        img.src = el.children("img").attr("src");
+        img.onload = function() {
+            if(this.height >= 200) {
+                el.children("img").css("object-fit","cover");
+            }
+        }
+    });
+
+    $(".products-catalog-item-imagebox").each(function(index){
+        const img = new Image();
+        const el = $(this);
+        img.src = el.children("img").attr("src");
+        img.onload = function() {
+            if(this.height >= 200) {
+                el.children("img").css("object-fit","cover");
+            }
+        }
+    });
+}
+
 $(document).ready(function () {
-    
+
     Fancybox.bind("[data-fancybox]", {});
 
     fixAboutUsBackground();
+
+    catalogImages();
 
     window.onclick = e => {
         if (!e.target.closest(".theme-dropdown")) {
@@ -149,18 +175,7 @@ $(document).ready(function () {
             parent.addClass("active");
         }
     });
-
-    $(".products-catalog-item-imagebox").each(function(index){
-        const img = new Image();
-        const el = $(this);
-        img.src = el.children("img").attr("src");
-        img.onload = function() {
-            if(this.height >= 200) {
-                el.children("img").css("object-fit","cover");
-            }
-        }
-    });
-
+    
     $(".products-catalog-item-imagebox").each(function(index){
         const img = new Image();
         const el = $(this);
@@ -354,5 +369,13 @@ $(window).scroll(function () {
             }, );
         }
     }
+    
+    if($(".scroll-animation").length) {
+        
+        $(".scroll-animation").each(function(){
+            if (checkVisible(this)) {
+                $(this).addClass("scroll-in");
+            }
+        });
+    }
 });
-

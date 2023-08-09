@@ -1,0 +1,32 @@
+.section-subpage-main a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+.section-subpage-main a:hover {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+.section-subpage-main h1, .section-subpage-main h2, .section-subpage-main h3, .section-subpage-main h4, .section-subpage-main h5, .section-subpage-main h6 {
+  color: var(--primary-color);
+}
+.section-subpage-main p, .section-subpage-main ul, .section-subpage-main ol {
+  color: var(--paragraph-color);
+}
+.section-subpage-main input, .section-subpage-main textarea {
+  outline: none;
+  box-shadow: none;
+}
+.section-subpage-main .navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.section-subpage-main .owl-carousel .owl-nav button {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.section-subpage-main .owl-carousel .owl-dots.disabled, .section-subpage-main .owl-carousel .owl-nav.disabled {
+  display: none !important;
+}/*# sourceMappingURL=resets.css.map */
