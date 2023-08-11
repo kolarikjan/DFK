@@ -1,4 +1,12 @@
-.section-subpage {
+.subpage {
+    &-content {
+        padding: 7rem 0;
+        @include media("md") {
+            padding: 3rem 0;
+        }
+    }
+}
+/*.section-subpage {
     &:not(.section-subpage-margin) > *:first-child {
         margin-top: 0 !important;
     }
@@ -264,3 +272,4 @@
         }
     }
 }
+*/

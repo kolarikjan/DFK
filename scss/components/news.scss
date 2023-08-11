@@ -4,8 +4,8 @@
     }
     &-item {
         background-color: var(--secondary-color);
-        height: calc(100% - 1.5rem);
-        margin-bottom: 1.5rem;
+        height: calc(100% - .8rem);
+        margin-bottom: .8rem;
         box-shadow: -0.776px -2.898px 61.32px 11.68px rgba(0, 0, 0, 0.05);
         &-date {
             position: absolute;

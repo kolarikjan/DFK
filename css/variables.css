@@ -11,6 +11,8 @@
     --border-color-light: #ffffff14;
     --border-color: #e1e4eb;
     --paragraph-color: #616161;
+    --section-color: #f3f3f3;
+    --section-color2: #f1f4fc;
 
     --table-color: #f6f9fc;
     --table-header-color: #e8f2fc;
@@ -39,7 +41,6 @@
     --input-radius: 5px;
     --gallery-radius: 10px;
     --popup-radius: 15px;
-    --section-color: #f1f4fc;
     --line-color-light: #ffffff38;
 
     --banner-homepage-background: url("../img/section-banner-background.png");

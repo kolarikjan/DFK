@@ -44,7 +44,7 @@ p, li {
   line-height: 30px;
 }
 
-input, textarea, button {
+input, textarea, button, select {
   outline: none;
   box-shadow: none;
   border: none;

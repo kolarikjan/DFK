@@ -5,27 +5,34 @@ Author url: www.jan-kolarik.cz
 */
 
 // Defaults
-@import "defaults/variables.scss";
-@import "defaults/resets.scss";
-@import "defaults/functions.scss";
+@import "defaults/variables";
+@import "defaults/resets";
+@import "defaults/functions";
 
-// Components
-@import "components/header.scss";
-@import "components/theme/buttons.scss";
-@import "components/theme/icons.scss";
-@import "components/theme/dropdowns.scss";
-@import "components/banners.scss";
-@import "components/sections.scss";
-@import "components/aboutus.scss";
-@import "components/news.scss";
-@import "components/copyright.scss";
-@import "components/newsletter.scss";
-@import "components/forms.scss";
-@import "components/map.scss";
+// Componentss
+@import "components/theme/buttons";
+@import "components/theme/icons";
+@import "components/theme/dropdowns";
+@import "components/theme/pagination";
+@import "components/banners";
+@import "components/sections";
+@import "components/aboutus";
+@import "components/news";
+@import "components/copyright";
+@import "components/newsletter";
+@import "components/forms";
+@import "components/map";
+@import "components/products-filter";
+@import "components/subpage";
+@import "components/products-catalog";
+@import "components/product-detail";
 
-// Layout
-@import "components/header.scss";
-@import "components/footer.scss";
+@import "pages/documents";
+@import "pages/region-select";
+
+// Layouts
+@import "components/header";
+@import "components/footer";
 
 // Style 
 @media (min-width: map-get($breaks, "xxl")) {
@@ -38,7 +45,7 @@ Author url: www.jan-kolarik.cz
         max-width: 1540px;
         padding-left: 15px;
         padding-right: 15px;
-    }
+    }   
 }
 @media (min-width: map-get($breaks, "xxxl")) {
     .container-extended {

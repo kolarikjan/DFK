@@ -40,6 +40,13 @@
             }
         }
     }
+    
+    &-icon {
+        @extend .theme-button-arrow;
+        svg {
+            margin-left: 0;
+        }
+    }
     &-bordered {
         border: 2px solid;
         padding: .95rem 1.95rem;

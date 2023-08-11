@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     @include media("md") {
-        padding: 4.5rem 0;
+        padding: 3rem 0;
     }
     p, li, a {
         color: var(--secondary-color);
