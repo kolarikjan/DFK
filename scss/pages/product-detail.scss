@@ -1,6 +1,8 @@
 .product-detail {
     &-imagebox {
         margin-bottom: .94rem;
+        background-color: var(--section-color);
+        border-radius: var(--border-radius);
         img {
             width: 100%;
             height: 480px;

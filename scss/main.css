@@ -599,10 +599,14 @@ input, textarea, button, select {
 }
 .banner-homepage-menu, .header-menu, .banner-subpage-menu {
   border-bottom: 1px solid var(--border-color-light);
-  padding: 1rem 0 0;
+}
+@media (max-width: 991px) {
+  .banner-homepage-menu, .header-menu, .banner-subpage-menu {
+    padding: 1.25rem 0 0;
+  }
 }
 .banner-homepage-menu .banner-menu-link > a, .header-menu .banner-menu-link > a, .banner-subpage-menu .banner-menu-link > a {
-  padding: 0.5rem 1.25rem 1.5rem 1.25rem;
+  padding: 1.5rem 1.25rem 1.5rem 1.25rem;
   letter-spacing: 0.015rem;
 }
 .banner-homepage-menu .banner-menu-link > a::after, .header-menu .banner-menu-link > a::after, .banner-subpage-menu .banner-menu-link > a::after {
@@ -632,6 +636,11 @@ input, textarea, button, select {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+@media (min-width: 991px) {
+  .banner-homepage-menu ul, .header-menu ul, .banner-subpage-menu ul {
+    margin: 0 -1.25rem;
+  }
 }
 .banner-homepage-menu ul li.dropdown-hover:hover .dropdown-hover-menu, .header-menu ul li.dropdown-hover:hover .dropdown-hover-menu, .banner-subpage-menu ul li.dropdown-hover:hover .dropdown-hover-menu {
   display: block !important;
@@ -920,6 +929,11 @@ input, textarea, button, select {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 1601px) {
+  .banner-subpage-main {
+    min-height: 350px;
+  }
+}
 @media (max-width: 768px) {
   .banner-subpage-main {
     min-height: 300px;
@@ -1143,6 +1157,7 @@ input, textarea, button, select {
   height: calc(100% - 0.8rem);
   margin-bottom: 0.8rem;
   box-shadow: -0.776px -2.898px 61.32px 11.68px rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius);
 }
 .section-news-item-date {
   position: absolute;
@@ -1154,10 +1169,21 @@ input, textarea, button, select {
   font-size: 13px;
   font-weight: 600;
   border-radius: 3px;
+  width: fit-content;
+  width: -moz-fit-content;
 }
 @media (max-width: 576px) {
   .section-news-item-date {
     left: 1.75rem;
+  }
+}
+.section-news-item-noImage .section-news-item-date {
+  bottom: unset;
+  top: 2.5rem;
+}
+@media (max-width: 576px) {
+  .section-news-item-noImage .section-news-item-date {
+    top: 1.75rem;
   }
 }
 .section-news-item-body {
@@ -1166,6 +1192,14 @@ input, textarea, button, select {
 @media (max-width: 576px) {
   .section-news-item-body {
     padding: 2.5rem 1.75rem 2.5rem;
+  }
+}
+.section-news-item-noImage .section-news-item-body {
+  padding: 6rem 2.5rem 2.75rem;
+}
+@media (max-width: 576px) {
+  .section-news-item-noImage .section-news-item-body {
+    padding: 5rem 1.75rem 2.5rem;
   }
 }
 .section-news-item-image {
@@ -2190,6 +2224,7 @@ input, textarea, button, select {
   height: 231px;
   -o-object-fit: scale-down;
      object-fit: scale-down;
+  border-radius: var(--border-radius);
 }
 .products-catalog-item-name {
   color: var(--primary-color);
@@ -2208,6 +2243,8 @@ input, textarea, button, select {
 
 .product-detail-imagebox {
   margin-bottom: 0.94rem;
+  background-color: var(--section-color);
+  border-radius: var(--border-radius);
 }
 .product-detail-imagebox img {
   width: 100%;
@@ -2391,7 +2428,7 @@ input, textarea, button, select {
   width: 100%;
   filter: grayscale(1);
 }
-@media (max-width: 1601px) {
+@media (max-width: 1200px) {
   .contacts-map {
     position: unset;
     margin-top: 2.5rem;
@@ -2416,6 +2453,17 @@ input, textarea, button, select {
     margin-bottom: 2rem;
   }
 }
+.contacts-item-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 3.5rem);
+}
+@media (max-width: 768px) {
+  .contacts-item-flex {
+    height: calc(100% - 2rem);
+  }
+}
 .contacts-item-header {
   margin-bottom: 2rem;
 }
@@ -2427,6 +2475,9 @@ input, textarea, button, select {
 }
 .contacts-item-image img {
   width: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: var(--section-color2);
   aspect-ratio: 1/1;
   border-radius: var(--border-radius);
 }
@@ -2436,6 +2487,11 @@ input, textarea, button, select {
 .contacts-item-smalltext p {
   font-size: 14px;
   line-height: 26px;
+}
+@media (min-width: 1200px) {
+  .contacts-item-smalltext p {
+    max-width: 90%;
+  }
 }
 .contacts-item-contacts {
   margin-top: 1.25rem;
@@ -2823,4 +2879,56 @@ input, textarea, button, select {
   .container-extended {
     max-width: 1680px;
   }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */ght-color2);
+  text-decoration: none;
+}
+
+.footer-socials ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-socials ul li:not(:last-of-type) {
+  margin-right: .5rem;
+}
+
+.footer-socials svg path {
+  fill: var(--highlight-color);
+}
+
+.footer-socials a {
+  background-color: var(--highlight-color2);
+  width: 45px;
+  height: 45px;
+  border-radius: var(--button-radius);
+  transition: 0.15s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-socials a:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (min-width: 1601px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .container-extended {
+    max-width: 1540px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container-extended {
+    max-width: 1680px;
+  }
+}

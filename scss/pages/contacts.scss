@@ -18,7 +18,7 @@
             width: 100%;
             filter: grayscale(1);
         }
-        @include media("xxl") {
+        @include media("xl") {
             position: unset;
             margin-top: 2.5rem;
             iframe {
@@ -37,6 +37,15 @@
         @include media("md") {
             margin-bottom: 2rem;
         }
+        &-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: calc(100% - 3.5rem);
+            @include media("md") {
+                height: calc(100% - 2rem);
+            }
+        }
         &-header {
             @extend .product-detail-description-header;
             margin-bottom: 2rem;
@@ -48,6 +57,8 @@
             margin-bottom: 1.5rem;
             img {
                 width: 180px;
+                object-fit: cover;
+                background-color: var(--section-color2);
                 aspect-ratio: 1/1;
                 border-radius: var(--border-radius);
             }
@@ -57,6 +68,9 @@
             p {
                 font-size: 14px;
                 line-height: 26px;
+                @include min-media("xl") {
+                    max-width: 90%;
+                }
             }
         }
         &-contacts {

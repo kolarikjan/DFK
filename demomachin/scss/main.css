@@ -1502,13 +1502,11 @@
 .section-subpage-main .section-subpage table {
   width: 100%;
 }
-.section-subpage-main .section-subpage table thead tr {
+.section-subpage-main .section-subpage table th {
   background-color: var(--table-header-color);
-}
-.section-subpage-main .section-subpage table thead tr th {
   font-weight: 500;
 }
-.section-subpage-main .section-subpage table tbody tr:nth-child(odd) {
+.section-subpage-main .section-subpage table tr:nth-child(odd) {
   background-color: var(--table-color);
 }
 .section-subpage-main .section-subpage table th, .section-subpage-main .section-subpage table td {
@@ -1907,4 +1905,10 @@
   .section-subpage-main .section.section-subpage > .section-block:last-child {
     padding-bottom: 4.25rem;
   }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */irst-child {
+    padding-top: 4.25rem;
+  }
+  .section-subpage-main .section.section-subpage > .section-block:last-child {
+    padding-bottom: 4.25rem;
+  }
+}

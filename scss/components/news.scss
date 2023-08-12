@@ -7,6 +7,7 @@
         height: calc(100% - .8rem);
         margin-bottom: .8rem;
         box-shadow: -0.776px -2.898px 61.32px 11.68px rgba(0, 0, 0, 0.05);
+        border-radius: var(--border-radius);
         &-date {
             position: absolute;
             bottom: -15px;
@@ -17,14 +18,28 @@
             font-size: 13px;
             font-weight: 600;
             border-radius: 3px;
+            @include widthFit();
             @include media("sm") {
                 left: 1.75rem;
+            }
+        }
+        &-noImage &-date {
+            bottom: unset;
+            top: 2.5rem;
+            @include media("sm") {
+                top: 1.75rem;
             }
         }
         &-body {
             padding: 3rem 2.5rem 2.75rem;
             @include media("sm") {
                 padding: 2.5rem 1.75rem 2.5rem;
+            }
+        }
+        &-noImage &-body {
+            padding: 6rem 2.5rem 2.75rem;
+            @include media("sm") {
+                padding: 5rem 1.75rem 2.5rem
             }
         }
         &-image {

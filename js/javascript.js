@@ -7,18 +7,18 @@ const checkVisible = (elm) => {
 
 }
 
-const numbersAnimation = () => {
+const numbersAnimation = (className) => {
     
-    const counters = document.querySelectorAll('.numbers-col-number');
+    const counters = document.querySelectorAll(className);
     let speed = 500;
 
     counters.forEach( counter => {
     const animate = () => {
         const value = +counter.getAttribute('data-value');
-        if (value < 100) {
+        if (value < 150) {
             speed = 500;
         } else if (value < 200) {
-            speed = 75;
+            speed = 40;
         } else {
             speed = 50;
         }
@@ -75,7 +75,7 @@ const companyFindNonActiveItem = (el, dir, rewriteElements = true) => {
 }
 
 let itemsCount;
-if ($(window).width() > 1400) {
+if ($(window).width() > 1500) {
     itemsCount = 6;
 } else if ($(window).width() > 1200) {
     itemsCount = 4;
@@ -150,6 +150,28 @@ $(document).ready(function () {
         }
     });
 
+    $(".products-catalog-item-imagebox").each(function(index){
+        const img = new Image();
+        const el = $(this);
+        img.src = el.children("img").attr("src");
+        img.onload = function() {
+            if(this.height >= 200) {
+                el.children("img").css("object-fit","cover");
+            }
+        }
+    });
+
+    $(".products-catalog-item-imagebox").each(function(index){
+        const img = new Image();
+        const el = $(this);
+        img.src = el.children("img").attr("src");
+        img.onload = function() {
+            if(this.height >= 200) {
+                el.children("img").css("object-fit","cover");
+            }
+        }
+    });
+
     initializeCompanySlider(itemsCount);
 
     $(".company-timeline-slider-top .company-timeline-item").each(function(index){
@@ -194,6 +216,9 @@ $(document).ready(function () {
         margin:1,
         nav:true,
         dots:true,
+        autoplay:true,
+        autoplayTimeout:6000,
+        autoplayHoverPause:false,
         responsive:{
             0:{
                 nav:false,
@@ -310,7 +335,7 @@ $(document).ready(function () {
 $(window).resize(function () { 
     containerRight();
     fixAboutUsBackground();
-    if ($(window).width() > 1400) {
+    if ($(window).width() > 1500) {
         itemsCount = 6;
     } else if ($(window).width() > 1200) {
         itemsCount = 4;
@@ -321,11 +346,11 @@ $(window).resize(function () {
 });
 var run = false;
 $(window).scroll(function () { 
-    if ($('.numbers-col-text').length) {
-        if (checkVisible(document.querySelector('.numbers-col-text')) && !run) {
+    if ($('.section-aboutus-counters-item').length) {
+        if (checkVisible(document.querySelector('.section-aboutus-counters-item')) && !run) {
             run = true;
             setTimeout(function(){
-            numbersAnimation();
+            numbersAnimation('.section-aboutus-counters-item span');
             }, );
         }
     }

@@ -110,13 +110,11 @@
     
     table {
         width: 100%;
-        thead tr {
+        th {
             background-color: var(--table-header-color);
-            th {
-                font-weight: 500;
-            }
+            font-weight: 500;
         }
-        tbody tr {
+        tr {
             &:nth-child(odd) {
                 background-color: var(--table-color);
             }
