@@ -1,0 +1,32 @@
+:root {
+    --button-color: #35a0e3;
+    --table-color: #f8f9fa;
+    --table-header-color: #56595e;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --paragraph-color: #555555;
+    --menu-color: #484848;
+    --highlight-color: #35a0e3;
+    --background-color: #ffffff;
+    --background-secondary-color: #e1f3ff;
+    --section-preTitle-background-color: #f4f4f4;
+    --section2-preTitle-background2-color: #ffffff;
+    --section-preTitle-color: #575656;
+    --services-boxes-color: #f1f8fd;
+    --news-date-color: #ababab;
+    --border-color: #e9e8e8;
+    --news-border-color: #eaecf0;
+    --highlight-light-color: #e1f3ff;
+    --socials-icon-color: #343434;
+    --footer-icon-color: #808080;
+    --copyright-color: #a2a2a2;
+    --border-radius: 10px;
+    --numbers-number-color: #35a0e3;
+    --link-color: #35a0e3;
+    --numbers-number-background: #fff;
+    --font: "Outfit", sans-serif;
+    --button-radius: 25px;
+    --border-radius: 10px;
+    --input-radius: 5px;
+}
+  

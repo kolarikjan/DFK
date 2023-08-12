@@ -1,7 +1,7 @@
 /* 
 Theme name: DFK
 Author: Jan Kolařík
-Author url: www.jan-kolarik.cz
+Author's url: www.jan-kolarik.cz
 */
 
 // Defaults
@@ -9,14 +9,16 @@ Author url: www.jan-kolarik.cz
 @import "defaults/resets";
 @import "defaults/functions";
 
-// Componentss
+// Theme Components
 @import "components/theme/buttons";
 @import "components/theme/icons";
 @import "components/theme/dropdowns";
 @import "components/theme/pagination";
 @import "components/theme/buttons-filter";
-@import "components/banners";
+
+// Page Components
 @import "components/sections";
+@import "components/banners";
 @import "components/aboutus";
 @import "components/news";
 @import "components/copyright";
@@ -24,19 +26,21 @@ Author url: www.jan-kolarik.cz
 @import "components/forms";
 @import "components/map";
 @import "components/products-filter";
-@import "components/subpage";
-@import "components/products-catalog";
-@import "components/product-detail";
+@import "components/contactform";
 
+// Pages
+@import "pages/subpage";
 @import "pages/documents";
 @import "pages/region-select";
-@import "pages/contacts";
 @import "pages/dealers";
 @import "pages/company";
+@import "pages/products-catalog";
+@import "pages/product-detail";
+@import "pages/contacts";
 
 // Layouts
-@import "components/header";
-@import "components/footer";
+@import "layout/header";
+@import "layout/footer";
 
 // Style 
 @media (min-width: map-get($breaks, "xxl")) {

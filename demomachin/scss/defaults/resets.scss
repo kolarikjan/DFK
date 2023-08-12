@@ -1,0 +1,34 @@
+.section-subpage-main {
+  a {
+    text-decoration: none;
+    color: var(--link-color);
+  }
+  a:hover {
+    text-decoration: underline;
+    color: var(--link-color);
+  }
+  h1,h2,h3,h4,h5,h6 {
+    color: var(--primary-color);
+  }
+  p,ul,ol {
+    color: var(--paragraph-color);
+  }
+  input, textarea {
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  .owl-carousel .owl-nav button {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+    display: none !important;
+  }
+}

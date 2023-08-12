@@ -1,0 +1,82 @@
+
+.section-subpage-main .footer-icons {
+    @include min-media("md") {
+        &-right {
+            .footer-icons-box {
+                flex-direction: row-reverse;
+            }
+            .footer-icons-content {
+                text-align: right;
+            }
+            .footer-icons-image {
+                margin-right: 0;
+                margin-left: 1rem;
+            }
+        }
+    }
+    &-box {
+        display: flex;
+        margin-bottom: 2.5rem;
+        @include media("md") {
+            @include flexCenterDir(column);
+            text-align: center;
+        }
+        &:hover .footer-icons-image:not(.noborder) {
+            background-color: var(--footer-icon-color);
+            svg path {
+                fill: var(--background-color);
+            }
+        }
+    }
+    &-image {
+        flex-shrink: 0;
+        margin-right: 1rem;
+        border: 1px solid var(--footer-icon-color);
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        transition: all 0.15s cubic-bezier(0, 0, 0, 0.68);
+        @include flexCenter();
+        &.noborder {
+            width: auto;
+            height: auto;
+            border: 0 !important;
+            align-items: flex-start;
+            svg {
+                margin-top: 1.25rem;
+                @include media("md") {
+                    margin-top: 0;
+                }
+            }
+        }
+        @include media("md") {
+            margin-right: 0;
+        }
+        svg path {
+            fill: var(--footer-icon-color);
+        }
+    }
+    &-title {
+        color: var(--paragraph-color);
+        font-size: 13px;
+        line-height: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.033rem;
+    }
+    &-content {
+        margin-top: 1rem;
+        p {
+            color: var(--primary-color);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        a { 
+            color: var(--highlight-color);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    }
+}

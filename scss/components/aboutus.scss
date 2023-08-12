@@ -9,7 +9,7 @@
         background-color: #dde2ed;
     }
     &-inner {
-        background-image: url("../../img/section-about-background.png");
+        background-image: url("../img/section-about-background.png");
         background-repeat: no-repeat;
         max-width: 1920px;
         margin: 0 auto;
@@ -67,12 +67,12 @@
         }
         & > .row {
             margin: 0 -1.5rem;
-            @media (max-width: 1400px) {
+            @media (max-width: 1500px) {
                 margin: 0 -.5rem;
             }
             & > div {
                 padding: 0 1.5rem;
-                @media (max-width: 1400px) {
+                @media (max-width: 1500px) {
                     padding: 0 .5rem;
                 }
                 &:nth-child(1) > div {
@@ -104,7 +104,7 @@
                 @include media("xxl") {
                     margin-top: 2.5rem;
                 }
-                @media (max-width: 1400px) {
+                @media (max-width: 1500px) {
                     margin-top: 2.25rem;
                 }
                 @include media("xl") {

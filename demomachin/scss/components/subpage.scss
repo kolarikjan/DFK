@@ -1,0 +1,253 @@
+.section-subpage-main .section-subpage {
+    &:not(.section-subpage-margin) > *:first-child {
+        margin-top: 0 !important;
+    }
+    & > p:last-child, & > ul:last-child, &:not(&-heading) > h2:last-child, &:not(&-heading) > h3:last-child, &:not(&-heading) > h4:last-child, &:not(&-heading) > h5:last-child {
+        margin-bottom: 0 !important;
+    }
+    h1 {
+        color: var(--highlight-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 42px;
+        margin: 4rem 0 3rem;
+        @include media("md") {
+            font-size: 38px;
+            margin: 3.5rem 0 2.5rem;
+        }
+    }
+    h2 {
+        color: var(--highlight-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 36px;
+        margin: 3.5rem 0 2.5rem;
+        @include media("md") {
+            font-size: 32px;
+            margin: 3rem 0 2rem;
+        }
+    }
+    h3 {
+        color: var(--highlight-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 26px;
+        margin: 3rem 0 2rem;
+        @include media("md") {
+            font-size: 22px;
+            margin: 2.5rem 0 1.75rem;
+        }
+    }
+    h4 {
+        color: var(--highlight-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 22px;
+        margin: 3rem 0 2rem;
+        @include media("md") {
+            font-size: 18px;
+            margin: 2.5rem 0 1.75rem;
+        }
+    }
+    h5 {
+        color: var(--highlight-color);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 3rem 0 2rem;
+        @include media("md") {
+            font-size: 16px;
+            margin: 2.5rem 0 1.75rem;
+        }
+    }
+    
+    p, li, td, th {
+        font-family: var(--font);
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 400;
+        color: var(--paragraph-color);
+        overflow-wrap: break-word;
+    }
+    b, strong {
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+    &-heading {
+        h3, h2 {
+            margin-bottom: 2.25rem !important;
+            @include media("md") {
+                margin-bottom: 1.75rem !important;
+            }
+        }
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+            display: flex;
+            align-items: flex-start;
+            &::before {
+                content: "";
+                display: block;
+                width: 15px;
+                height: 2px;
+                background-color: var(--highlight-color);
+                margin-top: 14px;
+                margin-right: 1rem;
+                flex-shrink: 0;
+            }
+        }
+    }
+    ol {
+        padding: 0 1.25rem;
+        li {
+            &::marker {
+                font-weight: 500;
+            }
+        }
+    }
+    
+    table {
+        width: 100%;
+        thead tr {
+            background-color: var(--table-header-color);
+            th {
+                font-weight: 500;
+            }
+        }
+        tbody tr {
+            &:nth-child(odd) {
+                background-color: var(--table-color);
+            }
+        }
+        th, td {
+            padding: .75rem 2.5rem;
+        }
+    }
+    @include media("md") {
+        text-align: center;
+    }
+}
+.section-form {
+    form {
+        box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.03);
+        border: 1px solid var(--news-border-color);
+        padding: 3rem 3.75rem;
+        border-radius: var(--border-radius);
+        @include media("md") {
+            padding: 2.25rem 2.25rem;
+            a, button {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .button-highlighted {
+            svg, path {
+                fill: var(--background-color);
+            }
+        }
+    }
+    &-checkbox {
+        display: block;
+        position: relative;
+        padding-left: 2rem;
+        cursor: pointer;
+        text-align: left;
+        font-size: 17px;
+        line-height: 22px;
+        color: var(--paragraph-color);
+        user-select: none;
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        &-checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 22px;
+            width: 22px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--input-radius);
+            &::after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 7px;
+                top: 3px;
+                width: 7px;
+                height: 12px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+        & input:checked ~ &-checkmark:after {
+            display: block;
+        }
+        &:hover input ~ &-checkmark {
+            background-color: var(--border-color);
+        }
+        & input:checked ~ &-checkmark {
+            border-color: var(--highlight-color);
+            background-color: var(--highlight-color);
+        }
+        &-radio {
+            .section-form-checkbox-checkmark {
+                border-radius: 50%;
+                height: 21px;
+                width: 21px;
+                &::after {
+                    top: 5px;
+                    left: 5px;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    background: white;
+                }
+            }
+        }
+    }
+    
+    &-box {
+        margin-bottom: .75rem;
+    }
+    &-input {
+        width: 100%;
+        border: 1px solid var(--news-border-color);
+        border-radius: var(--input-radius);
+        color: var(--primary-color);
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 30px;
+        padding: 0.75rem 1.5rem;
+        transition-duration: 0.15s;
+        &:is(textarea) {
+            resize: none;
+            min-height: 120px;
+        }
+        &:is(select) {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+            background-image: url("../img/arrow-dropdown-black.png");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+        }
+        &:focus, &:active {
+            border-color: var(--highlight-color);
+            outline: none;
+            box-shadow: none;
+        }
+        &::placeholder {
+            color: var(--primary-color);
+        }
+    }
+}

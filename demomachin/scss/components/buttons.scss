@@ -1,0 +1,54 @@
+.section-subpage-main .button-white {
+    @include flexCenter();
+    border-radius: var(--button-radius);
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.25s;
+    padding: 0.7rem 1.5rem;
+    @include widthFit();
+    svg {
+        margin-left: 1rem;
+        path {
+            fill: var(--secondary-color);
+        }
+    }
+    &:hover {
+        background-color: var(--secondary-color);
+        color: var(--button-color);
+        text-decoration: none;
+        svg, path {
+            fill: var(--button-color) !important;
+        }
+        box-shadow: inset 10em 0 0 0 var(--secondary-color);
+    }
+}
+.section-subpage-main .button-highlighted {
+    @include flexCenter();
+    border-radius: var(--button-radius);
+    border: 2px solid var(--button-color);
+    color: var(--secondary-color);
+    background-color: var(--button-color);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.25s;
+    padding: 0.7rem 1.5rem;
+    @include widthFit();
+    svg {
+        margin-left: 1rem;
+        path {
+            fill: var(--secondary-color);
+        }
+    }
+    &:hover {
+        background-color: var(--secondary-color);
+        color: var(--button-color);
+        text-decoration: none;
+        svg, path {
+            fill: var(--button-color) !important;
+        }
+        box-shadow: inset 10em 0 0 0 var(--secondary-color);
+    }
+}

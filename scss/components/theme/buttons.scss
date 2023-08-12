@@ -7,9 +7,7 @@
     transition-duration: 0.1s;
     border-radius: var(--button-radius);
     position: relative;
-    &:hover {
-        text-decoration: none;
-    }
+    text-decoration: none !important;
     /*span {
         position: relative;
         &::after {

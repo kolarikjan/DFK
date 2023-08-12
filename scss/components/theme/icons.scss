@@ -26,4 +26,12 @@
             background-color: var(--section-color2);
         }
     }
+    &-hover:hover {
+        background-color: var(--highlight-color);
+        svg {
+            &, & > path {
+                fill: var(--highlight-color2);
+            }
+        }
+    }
 }
