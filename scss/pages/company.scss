@@ -1,0 +1,26 @@
+.company {
+    &-concern {
+        margin-top: 7rem;
+        margin-right: 3rem;
+        border: 9px solid var(--border-color);
+        border-radius: var(--border-radius);
+        padding: 3rem;
+        @include media("xl") {
+            margin-right: 0;
+        }
+        @include media("lg") {
+            margin-top: 3rem;
+        }
+        @include media("md") {
+            padding: 2rem;
+        }
+    }
+    &-description {
+        h3 {
+            text-transform: none;
+        }
+    }
+    &-timeline {
+        background-color: var(--section-color2);
+    }
+}

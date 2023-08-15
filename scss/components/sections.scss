@@ -47,9 +47,10 @@
         p, li, td, th {
             font-family: var(--font);
             font-size: 16px;
-            line-height: 30px;
+            line-height: 32px;
             font-weight: 400;
             color: var(--paragraph-color);
+            overflow-wrap: break-word;
         }
         table {
             width: 100%;

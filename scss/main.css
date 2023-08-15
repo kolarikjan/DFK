@@ -42,6 +42,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   color: var(--primary-color);
   font-family: var(--font2);
+  line-height: 1.4;
 }
 
 p, li {
@@ -857,9 +858,10 @@ input, textarea, button, select {
 .section-output p, .section-output li, .section-output td, .section-output th {
   font-family: var(--font);
   font-size: 16px;
-  line-height: 30px;
+  line-height: 32px;
   font-weight: 400;
   color: var(--paragraph-color);
+  overflow-wrap: break-word;
 }
 .section-output table {
   width: 100%;
@@ -2218,6 +2220,35 @@ input, textarea, button, select {
   .dealers-locations-item {
     margin-bottom: 2rem;
   }
+}
+
+.company-concern {
+  margin-top: 7rem;
+  margin-right: 3rem;
+  border: 9px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 3rem;
+}
+@media (max-width: 1200px) {
+  .company-concern {
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  .company-concern {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .company-concern {
+    padding: 2rem;
+  }
+}
+.company-description h3 {
+  text-transform: none;
+}
+.company-timeline {
+  background-color: var(--section-color2);
 }
 
 .header {
