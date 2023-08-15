@@ -1,0 +1,13 @@
+.dealers-map iframe {
+  width: 100%;
+  height: 600px;
+}
+.dealers-locations {
+  margin-top: 4rem;
+  margin-bottom: -3rem;
+}
+.dealers-locations-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}/*# sourceMappingURL=dealers.css.map */

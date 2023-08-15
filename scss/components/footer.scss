@@ -6,7 +6,7 @@
     @include media("md") {
         padding: 3rem 0;
     }
-    p, li, a {
+    p, li, a, b, strong {
         color: var(--secondary-color);
     }
     &-row {

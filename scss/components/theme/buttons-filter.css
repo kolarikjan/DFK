@@ -1,0 +1,20 @@
+.buttons-filter ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.buttons-filter ul li a {
+  min-width: 160px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  background-color: var(--secondary-color);
+  transition-duration: 0.15s;
+  color: var(--highlight-color);
+  padding: 0.75rem 0.5rem;
+  display: block;
+}
+.buttons-filter ul li a.active, .buttons-filter ul li a:hover {
+  border-color: var(--highlight-color-2);
+  background-color: var(--highlight-color-2);
+  color: var(--secondary-color);
+}/*# sourceMappingURL=buttons-filter.css.map */
