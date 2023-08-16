@@ -53,6 +53,14 @@ const fixAboutUsBackground = () => {
     }
 }
 
+const companySliderChanger = () => {
+    if ($(".company-timeline-slider-top .company-timeline-item.active").length > $(".company-timeline-slider-bottom .company-timeline-item.active").length) {
+        $(".company-timeline-slider-top .company-timeline-item.active:first-child").removeClass("active");
+        $(".company-timeline-slider-bottom .company-timeline-item.active:last-child").next();
+        $(".company-timeline-slider-bottom .company-timeline-item.active:last-child").nextAll().removeClass("active");
+    }
+}
+
 $(document).ready(function () {
     
     Fancybox.bind("[data-fancybox]", {});
@@ -87,6 +95,15 @@ $(document).ready(function () {
         
         $(this).closest(".popup-content").css("display", "none");
         
+    });
+
+    $(".company-timeline-slider-nav-prev").click(function (e) { 
+        e.preventDefault();
+        companySliderChanger();
+    });
+    $(".company-timeline-slider-nav-next").click(function (e) { 
+        e.preventDefault();
+        companySliderChanger();
     });
 
     $('.banner-homepage-owl').owlCarousel({
