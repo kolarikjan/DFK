@@ -2532,6 +2532,97 @@ input, textarea, button, select {
   color: var(--highlight-color2);
 }
 
+.quality-heading {
+  margin-bottom: 5rem;
+}
+@media (max-width: 768px) {
+  .quality-heading {
+    margin-bottom: 2.5rem;
+  }
+}
+.quality-content ul li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.quality-content ul li::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14px' height='11px'%3E%3Cpath fill-rule='evenodd' fill='rgb(254, 213, 10)' d='M5.122,6.571 L2.632,3.994 L0.442,6.101 L5.122,10.786 L13.960,2.280 L11.770,0.173 L5.122,6.571 Z'/%3E%3C/svg%3E");
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  margin-top: 0.25rem;
+  margin-right: 1.5rem;
+  border: 3px solid var(--highlight-color2);
+  border-radius: var(--button-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .quality-image {
+    margin-bottom: 2.5rem;
+  }
+}
+.quality-download {
+  margin-top: 3.5rem;
+  border: 1px solid var(--border-color);
+}
+@media (max-width: 768px) {
+  .quality-download {
+    margin-top: 2.5rem;
+  }
+}
+.quality-download > .quality-download-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+.quality-download-item {
+  padding: 0.9rem 1.75rem;
+}
+.quality-download-item:hover {
+  background-color: var(--border-color);
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.quality-download-item p {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.quality-download-item svg path {
+  fill: var(--highlight-color);
+}
+.quality-certificates {
+  background-color: var(--section-color2);
+}
+.quality-certificates .row {
+  margin-bottom: -3rem;
+}
+.quality-certificates .row > div {
+  margin-bottom: 3rem;
+}
+.quality-certificates-item a {
+  display: block;
+  margin-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .quality-certificates-item a {
+    margin-bottom: 2rem;
+  }
+}
+.quality-certificates-item a img {
+  max-width: 165px;
+  height: 230px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+.quality-certificates-item h4 {
+  margin-bottom: 1.5rem;
+  padding-right: 1rem;
+}
+@media (max-width: 1601px) {
+  .quality-certificates-item h4 {
+    padding-right: 0;
+  }
+}
+
 .header {
   background-color: var(--background-color);
 }
