@@ -26,21 +26,11 @@
         }
         .owl-nav {
             margin-top: 0;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: -1.25rem;
-            right: -1.25rem;
-            width: calc(100% + 2.5rem);
-            display: flex;
-            justify-content: space-between;
-            @include media("sm") {
-                left: -.5rem;
-                right: -.5rem;
-                width: calc(100% + 1rem);
-            }
             button {
                 &.owl-prev, &.owl-next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
                     @include flexCenter();
                     border-radius: var(button-radius);
                     background-color: var(--section-color2) !important;
@@ -55,6 +45,18 @@
                         svg, path {
                             fill: var(--secondary-color);
                         }
+                    }
+                }
+                &.owl-prev {
+                    left: -1.25rem;
+                    @include media("sm") {
+                        left: -.5rem;
+                    }
+                }
+                &.owl-next {
+                    right: -1.25rem;
+                    @include media("sm") {
+                        right: -.5rem;
                     }
                 }
             }
@@ -140,7 +142,7 @@
             &-icon {
                 @include flexCenter();
                 height: 50px;
-                margin-bottom: .25rem;
+                margin-bottom: .5rem;
                 svg {
                     max-height: 50px;
                     max-width: 75px;
