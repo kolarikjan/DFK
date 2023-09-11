@@ -25,9 +25,9 @@
                     display: block;
                     width: calc(100% - 2.5rem);
                     height: 5px;
-                    @include media("xl") {
-                        padding: 1.25rem 1.25rem 1.25rem 1.25rem;
-                    }
+                }
+                @include media("xl") {
+                    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
                 }
                 &:hover::after {
                     content: "";

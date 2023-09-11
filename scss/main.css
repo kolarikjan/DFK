@@ -636,7 +636,7 @@ input, textarea, button, select {
   height: 5px;
 }
 @media (max-width: 1200px) {
-  .banner-homepage-menu .banner-menu-link > a::after, .header-menu .banner-menu-link > a::after, .banner-subpage-menu .banner-menu-link > a::after {
+  .banner-homepage-menu .banner-menu-link > a, .header-menu .banner-menu-link > a, .banner-subpage-menu .banner-menu-link > a {
     padding: 1.25rem 1.25rem 1.25rem 1.25rem;
   }
 }
