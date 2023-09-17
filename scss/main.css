@@ -635,6 +635,11 @@ input, textarea, button, select {
   width: calc(100% - 2.5rem);
   height: 5px;
 }
+@media (max-width: 1200px) {
+  .banner-homepage-menu .banner-menu-link > a::after, .header-menu .banner-menu-link > a::after, .banner-subpage-menu .banner-menu-link > a::after {
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+  }
+}
 .banner-homepage-menu .banner-menu-link > a:hover::after, .header-menu .banner-menu-link > a:hover::after, .banner-subpage-menu .banner-menu-link > a:hover::after {
   content: "";
 }
@@ -947,7 +952,7 @@ input, textarea, button, select {
 }
 @media (max-width: 1601px) {
   .banner-subpage-main {
-    min-height: 350px;
+    min-height: 250px;
   }
 }
 @media (max-width: 768px) {
@@ -966,6 +971,11 @@ input, textarea, button, select {
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+}
+@media (max-width: 1601px) {
+  .banner-subpage-main h1 {
+    margin-bottom: 0.75rem;
+  }
 }
 @media (max-width: 768px) {
   .banner-subpage-main h1 {

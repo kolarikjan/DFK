@@ -25,6 +25,9 @@
                     display: block;
                     width: calc(100% - 2.5rem);
                     height: 5px;
+                    @include media("xl") {
+                        padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+                    }
                 }
                 &:hover::after {
                     content: "";
@@ -324,7 +327,7 @@
         flex-direction: column;
         justify-content: center;
         @include media("xxl") {
-            min-height: 350px;
+            min-height: 250px;
         }
         @include media("md") {
             min-height: 300px;
@@ -338,6 +341,9 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 1.5rem;
+            @include media("xxl") {
+                margin-bottom: .75rem;
+            }
             @include media("md") {
                 margin-bottom: 0;
                 font-size: 40px;
