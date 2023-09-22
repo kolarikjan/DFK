@@ -940,7 +940,7 @@ input, textarea, button, select {
   }
 }
 .banner-subpage-main {
-  min-height: 430px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
